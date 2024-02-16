@@ -1,0 +1,29 @@
+app:
+  port: 8080
+  timeout: 60s
+
+mysql:
+  database: "payment-gateway"
+  host: "localhost"
+  port: "3306"
+  timeout: 10s
+  maxconns: 100
+  maxlifetime: 30m
+  maxidleconns: 10s
+
+promptpayclient:
+  baseurl: "http://localhost:9090/"
+  maxconns: 10
+  timeout: 10s
+  urlvalidate: "promptpay/validate"
+  urlconfirm: "promptpay/confirm"
+
+merchantclient:
+  baseurl: "http://localhost:7070/"
+  maxconns: 10
+  timeout: 10s
+  urlconfirm: "merchant/confirm"
+
+secrets:
+  mysqlUsername: "root"
+  mysqlPassword: "1234"

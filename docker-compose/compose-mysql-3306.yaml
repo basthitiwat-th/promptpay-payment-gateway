@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: payment-gateway
+      TZ: Asia/Bangkok
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db/mysql:/var/lib/mysql

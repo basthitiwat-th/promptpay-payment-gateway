@@ -1,0 +1,20 @@
+### Validate
+curl --location 'http://localhost:8080/payment-gateway/validate' \
+--header 'Content-Type: application/json' \
+--data '{
+    "account_no" : "0588559424",
+    "merchant_id" : 1,
+    "prompt_pay_id" : "0561456778",
+    "amount" : 10
+}'
+###
+
+### Confirm
+curl --location 'http://localhost:8080/payment-gateway/confirm' \
+--header 'Content-Type: application/json' \
+--data '{
+    "reference_id" : "8ae7f978-0638-4b34-9d0c-5ac43b1e2775"
+}'
+###
+
+
